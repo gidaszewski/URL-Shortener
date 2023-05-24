@@ -6,5 +6,5 @@ Aplicación para acortar links
 - ⚙️ Django
 
 <h1 align="center">
-  <img style="border-radius: 20px" src="Sistema/UrlShortener/Inicio/static/Inicio/assets/img/info.gif" alt="..." />
+  <img style="border-radius: 50px" src="Sistema/UrlShortener/Inicio/static/Inicio/assets/img/info.gif" alt="..." />
 </h1>
