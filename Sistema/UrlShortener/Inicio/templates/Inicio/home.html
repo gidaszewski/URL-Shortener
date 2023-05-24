@@ -1,0 +1,35 @@
+{% extends 'Inicio/base.html' %}
+
+{% block bloque %}
+{% load static %}
+
+    <!-- Page content-->
+    <div class="masthead">
+        <div class="containter">
+            <div class="text-center text-dark mt-5">
+                <h1 class="text-secondary">Haz que todos tus links sean simples</h1>
+                <p class="lead text-dark">Acorta tus URLs con Shorty</p>
+                <p class="text-secondary">Shorty v1.0.0</p>
+            </div>
+        </div>
+        <div class="container d-flex h-auto align-items-center justify-content-center mt-5">
+            <div class="card bg-warning rounded-5 shadow text-center" style="width: 45rem; height: 35rem;">
+                <div class="pe-5 ps-5 rounded text-center">
+                    <h2 class="mt-5 mb-4 text-white">Ingresá tu URL</h2>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                            <input style="border-radius: 50px; border-width: 0px;" type="text" id="{{ form.url.id_for_label }}" name="{{ form.url.html_name }}" placeholder="https://www.example.com" required>
+                            <button class="btn btn-light mt-4 text-black" type="submit" style="width: 200px; border-radius: 100px;">Acortar</button>
+                            <p style="font-weight: 100;" class="text-white mt-5 mb-4">Aquí es donde sucede la magia...</p>
+                            <div class="mt-5" id="target">
+                                <img style="width: 15%;" src="{% static "Inicio/assets/img/magic-wand-svgrepo-com.svg" %}" alt="">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
